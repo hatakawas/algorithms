@@ -2,7 +2,7 @@ package com.example.algorithms.leetcode;
 
 /**
  * https://leetcode-cn.com/problems/uncrossed-lines/
- *
+ * <p>
  * Created on May 21, 2021.
  *
  * @author hatakawas
@@ -20,9 +20,10 @@ public class P1035UncrossedLines {
 
     public int maxUncrossedLines(int[] nums1, int[] nums2) {
         int k = 0, count = 0;
-        for (int value : nums1) {
+
+        for (int i = 0; i < nums1.length; i++) {
             for (int j = k; j < nums2.length; j++) {
-                if (value == nums2[j]) {
+                if (nums1[i] == nums2[j]) {
                     k = j + 1;
                     count++;
                     break;
